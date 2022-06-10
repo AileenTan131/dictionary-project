@@ -22,6 +22,8 @@ export default function Dictionary() {
           placeholder="What would you like to search for?"
           autoFocus={true}
           onChange={updateKeyword}
+          // style="width:200px"
+          size="80"
         />
       </form>
     </div>
