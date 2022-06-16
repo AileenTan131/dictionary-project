@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import axios from "axios";
 
 import "./Dictionary.css";
 
@@ -7,8 +8,15 @@ export default function Dictionary() {
 
   function handleSubmit(event) {
     event.preventDefault();
-    alert(`Searching for ${keyword}`);
   }
+
+  function showData(response) {
+    console.log(response);
+  }
+
+  let apiURL = `https://api.dictionaryapi.dev/api/v2/entries/en/${keyword}`;
+  axios.get(apiURL).then(showData);
+
   function updateKeyword(event) {
     event.preventDefault();
     setKeyword(event.target.value);
