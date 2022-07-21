@@ -35,15 +35,19 @@ export default function Dictionary(props) {
   if (loaded) {
     return (
       <div className="Dictionary">
-        <form onSubmit={handleSubmit}>
-          <input
-            type="search"
-            placeholder="What would you like to search for?"
-            autoFocus={true}
-            onChange={updateKeyword}
-            size="80"
-          />
-        </form>
+        <section>
+          <h5>What word do you want to look up?</h5>
+          <form onSubmit={handleSubmit}>
+            <input
+              type="search"
+              autoFocus={true}
+              placeholder={props.defaultKeyword}
+              onChange={updateKeyword}
+              size="80"
+            />
+          </form>
+          <h6>suggested keywords: dog, heavy, merry, love</h6>
+        </section>
         <Results results={results} />
       </div> //4. onsubmit, user input gets send to api (onSubmit={handleSubmit})
       //5. onChange={updateKeyword} replaces default keyword with setKeyword state

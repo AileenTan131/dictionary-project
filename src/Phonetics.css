@@ -1,0 +1,20 @@
+.Phonetics {
+  margin: 13px;
+}
+
+.Phonetics a {
+  border: 2px solid var(--light-color);
+  border-radius: 20px;
+  padding: 5px 10px;
+  margin-right: 5px;
+  background-color: var(--light2-color);
+  color: var(--dark-color);
+  font-weight: bold;
+  font-size: 14px;
+}
+
+a:hover {
+  border: 2px solid var(--dark-color);
+  background-color: var(--medium-color);
+  color: var(--light-color);
+}

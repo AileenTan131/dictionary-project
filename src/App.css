@@ -1,3 +1,25 @@
+:root {
+  --dark-color: #193b45;
+  --medium-color: #1687a7;
+  --light2-color: #d3e0ea;
+  --light-color: #f6f5f5;
+}
+
 .App-footer {
   text-align: center;
+  color: var(--medium-color);
+  font-weight: bold;
+  font-size: smaller;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+.App {
+  display: block;
+  margin: 0 auto;
+  max-width: 70%;
+}
+
+body {
+  background-color: var(--light2-color);
 }

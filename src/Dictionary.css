@@ -1,3 +1,39 @@
 .Dictionary {
   text-align: center;
+  color: var(--light-color);
+}
+
+.Dictionary h5,
+h6 {
+  color: #ffffffe3;
+}
+
+.Dictionary h5 {
+  font-weight: bold;
+}
+.Dictionary h6 {
+  font-style: italic;
+  font-size: smaller;
+  margin-top: 7px;
+}
+
+.Dictionary input {
+  color: var(--medium-color);
+  font-weight: bold;
+  text-transform: capitalize;
+  text-align: center;
+  font-size: 15px;
+  padding: 8px;
+  border-radius: 15px;
+  border: 0px;
+}
+
+section {
+  background-color: var(--medium-color);
+  padding: 30px;
+  border: 0.5px solid rgb(136, 136, 136);
+  border-color: var(--light-color);
+  border-radius: 25px;
+  box-shadow: var(--light-color) 0px 4px 6px 0;
+  margin: 20px;
 }
