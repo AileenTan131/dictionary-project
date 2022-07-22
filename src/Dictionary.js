@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import Results from "./Results";
+import Images from "./Images";
 
 import "./Dictionary.css";
 
@@ -8,6 +9,7 @@ export default function Dictionary(props) {
   let [keyword, setKeyword] = useState(props.defaultKeyword);
   let [results, setResults] = useState(null);
   let [loaded, setLoaded] = useState(false);
+  let [image, setImage] = useState(null);
 
   function handleDictResponse(response) {
     setResults(response.data[0]);
@@ -15,10 +17,21 @@ export default function Dictionary(props) {
     //3. when loaded is true, the form gets run
   }
 
+  function handlePexelResponse(response) {
+    setImage(response.data.photos);
+  }
+
   function search() {
-    let apiURL = `https://api.dictionaryapi.dev/api/v2/entries/en_US/${keyword}`;
+    let dictionaryApiURL = `https://api.dictionaryapi.dev/api/v2/entries/en_US/${keyword}`;
     //2. api call runs the default keyword
-    axios.get(apiURL).then(handleDictResponse);
+    axios.get(dictionaryApiURL).then(handleDictResponse);
+
+    let pexelApiKey =
+      "563492ad6f917000010000017a39e7c70fd7414fa852c17acdbacb14";
+    let pexelApiURL = `https://api.pexels.com/v1/search?query=${keyword}&per_page=1`;
+    axios
+      .get(pexelApiURL, { headers: { Authorization: `Bearer ${pexelApiKey}` } })
+      .then(handlePexelResponse);
   }
 
   function handleSubmit(event) {
@@ -49,6 +62,7 @@ export default function Dictionary(props) {
           <h6>suggested keywords: dog, heavy, merry, love</h6>
         </section>
         <Results results={results} />
+        <Images image={image} />
       </div> //4. onsubmit, user input gets send to api (onSubmit={handleSubmit})
       //5. onChange={updateKeyword} replaces default keyword with setKeyword state
     );
