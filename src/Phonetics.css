@@ -13,10 +13,10 @@
   font-size: 14px;
 }
 
-a:hover {
+.Phonetics a:hover {
   border: 2px solid var(--dark-color);
   background-color: var(--medium-color);
   color: var(--light-color);
   transition: all 200ms ease-in-out;
-  cursor: zoom-in;
+  cursor: pointer;
 }

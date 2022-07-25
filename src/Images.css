@@ -2,3 +2,7 @@ img {
   margin-bottom: 30px;
   border-radius: 10px;
 }
+
+img:hover {
+  cursor: zoom-in;
+}

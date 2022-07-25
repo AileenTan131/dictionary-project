@@ -14,6 +14,18 @@
   margin-bottom: 20px;
 }
 
+.footer-links:hover {
+  color: var(--dark-color);
+}
+
+.footer-links:active {
+  color: orange;
+}
+
+.footer-links {
+  color: rgb(101, 101, 255);
+}
+
 .App {
   display: block;
   margin: 0 auto;
