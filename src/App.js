@@ -14,6 +14,8 @@ export default function App() {
             <a
               href="https://www.linkedin.com/in/aileen-tan-878157b5/"
               className="footer-links"
+              target="_blank"
+              rel="noreferrer"
             >
               Aileen Tan
             </a>
@@ -21,6 +23,8 @@ export default function App() {
             <a
               href="https://github.com/Minim131/dictionary-project"
               className="footer-links"
+              target="_blank"
+              rel="noreferrer"
             >
               open-sourced on Github
             </a>{" "}
