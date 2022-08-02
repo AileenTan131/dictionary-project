@@ -29,9 +29,13 @@
 .App {
   display: block;
   margin: 0 auto;
-  max-width: 70%;
 }
 
 body {
   background-color: var(--light2-color);
+}
+@media (min-width: 1000px) {
+  .App {
+    max-width: 70%;
+  }
 }

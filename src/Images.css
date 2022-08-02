@@ -6,3 +6,11 @@ img {
 img:hover {
   cursor: zoom-in;
 }
+
+@media (max-width: 500px) {
+  .columns {
+    width: 100%;
+    padding: 0;
+    margin-bottom: -20px;
+  }
+}

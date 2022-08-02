@@ -52,11 +52,12 @@ export default function Dictionary(props) {
           <h5>What word do you want to look up?</h5>
           <form onSubmit={handleSubmit}>
             <input
+              className="input-bar"
               type="search"
               autoFocus={true}
               placeholder={props.defaultKeyword}
               onChange={updateKeyword}
-              size="80"
+              // size="80"
             />
           </form>
           <h6>suggested keywords: dog, heavy, merry, love</h6>
