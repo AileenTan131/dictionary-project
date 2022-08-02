@@ -37,7 +37,13 @@ section {
   box-shadow: var(--light-color) 0px 4px 6px 0;
   margin: 20px;
 }
-
-.input-bar {
-  /* width: 80px; */
+@media (max-width: 300px) {
+  .input-bar {
+    width: 150px;
+  }
+}
+@media (min-width: 1200px) {
+  .input-bar {
+    width: 700px;
+  }
 }
