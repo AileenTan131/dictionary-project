@@ -55,7 +55,7 @@ export default function Dictionary(props) {
               className="input-bar"
               type="search"
               autoFocus={true}
-              placeholder={props.defaultKeyword}
+              placeholder={"    " + props.defaultKeyword}
               onChange={updateKeyword}
               // size="80"
             />
